@@ -17,7 +17,6 @@ smoothScrollTo('#top')
 
 function App() {
   const [count, setCount] = useState(0)
-  const [labs , setRuns ] = useState(0);
 
   return (
     <>
