@@ -4,7 +4,7 @@ function Bottom() {
       <>
         <div className="pt-[2000px]">
             <div id="top" className="pt-[1000px] section">
-                <h1>Bootm terst</h1>
+                <h1>Bootm tersddddddddddddddt</h1>d
             </div>
         </div>
       </>
