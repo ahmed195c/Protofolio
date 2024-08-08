@@ -2,29 +2,33 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import List from './List.jsx'
 
+function smoothScrollTo(targetId) {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: 'smooth' // Smooth scrolling behavior
+    });
+  }
+}
 
+smoothScrollTo('#top')
 
 function App() {
-
-  const frutes = [{ id: 1, name: "appel", calories: 95 },
-  { id: 2, name: "bnana", calories: 62 },
-  { id: 3, name: "ciio", calories: 35 },
-  { id: 4, name: "smoker", calories: 44 },
-  { id: 5, name: "dragon furte", calories: 195 },
-  ];
-
-  const vegitbale = [{id:1, name: "loka",calories:22},
-                     {id:2, name: "foka", calories:45},
-  ]
+  const [count, setCount] = useState(7)
 
   return (
     <>
-    <div className='flex gap-10'>
-    <List items={vegitbale} category="vegeitabel"/>
-    <List items={frutes} category="frute" />
-    </div>
+      <div>
+        <ul className='flex gap-5'>
+          <li>
+            <a href="#top">about</a>
+            </li>
+          <li>projects</li>
+          <li>bombaCLat</li>
+        </ul>
+      </div>
     </>
 
   )
